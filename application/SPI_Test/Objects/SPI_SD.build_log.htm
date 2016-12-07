@@ -1,0 +1,177 @@
+<<<<<<< HEAD
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.17.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Amit Dubey, ABCINC, LIC=FYKJJ-UWHNF-U42S7-EMXGI-K7DGD-V0RKS
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.17
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.17
+Dialog DLL:      DCM.DLL V1.13.4.0
+Target DLL:      CMSIS_AGDI.dll V1.23.1.0
+Dialog DLL:      TCM.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+D:\LPC_projects\application\SPI_Test\SPI_SD.uvprojx
+Project File Date:  12/03/2016
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'lpc1549'
+compiling freertos_blinky.c...
+app\sd_card.h(83): warning:  #940-D: missing return statement at end of non-void function "SPI_RecvByte"
+   }
+app\freertos_blinky.c(326): warning:  #177-D: function "vUARTTask" was declared but never referenced
+  static void vUARTTask(void *pvParameters) {
+app\freertos_blinky.c: 2 warnings, 0 errors
+compiling sd_card.c...
+app\sd_card.h(83): warning:  #940-D: missing return statement at end of non-void function "SPI_RecvByte"
+   }
+app\sd_card.c: 1 warning, 0 errors
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+compiling tasks.c...
+compiling timers.c...
+compiling heap_3.c...
+compiling port.c...
+compiling FreeRTOSCommonHooks.c...
+assembling keil_startup_lpc15xx.s...
+compiling sysinit.c...
+linking...
+Program Size: Code=11352 RO-data=520 RW-data=104 ZI-data=25752  
+FromELF: creating hex file...
+".\Objects\SPI_SD.axf" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.0.pack
+                ARM::CMSIS:CORE:5.0.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1500_DFP.1.2.0.pack
+                Keil::Device:Startup:2.20
+                NXP LPC1500 Series Device Support and Examples
+   * Component: Startup Version: 2.20
+
+<h2>Collection of Component include folders:</h2>
+  D:\LPC_projects\application\SPI_Test\RTE
+  D:\LPC_projects\application\SPI_Test\RTE\Device\LPC1549JBD64
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\LPC1500_DFP\1.2.0\LPCOpen\software\lpc_core\lpc_chip\chip_15xx
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.0
+
+   * Component: Keil::Device:Startup:2.20
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   LPCOpen\applications\lpc15xx\startup_code\sysinit.c
+      Source file:   LPCOpen\applications\lpc15xx\startup_code\keil_startup_lpc15xx.s
+Build Time Elapsed:  00:00:13
+</pre>
+</body>
+</html>
+=======
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.17.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Amit Dubey, ABCINC, LIC=FYKJJ-UWHNF-U42S7-EMXGI-K7DGD-V0RKS
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.17
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.17
+Dialog DLL:      DCM.DLL V1.13.4.0
+Target DLL:      CMSIS_AGDI.dll V1.23.1.0
+Dialog DLL:      TCM.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+D:\LPC_Working_projects\application\SPI_Test\SPI_SD.uvprojx
+Project File Date:  11/21/2016
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'lpc1549'
+compiling freertos_blinky.c...
+app\sd_card.h(83): warning:  #940-D: missing return statement at end of non-void function "SPI_RecvByte"
+   }
+app\freertos_blinky.c(326): warning:  #177-D: function "vUARTTask" was declared but never referenced
+  static void vUARTTask(void *pvParameters) {
+app\freertos_blinky.c: 2 warnings, 0 errors
+compiling sd_card.c...
+app\sd_card.h(83): warning:  #940-D: missing return statement at end of non-void function "SPI_RecvByte"
+   }
+app\sd_card.c: 1 warning, 0 errors
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+compiling tasks.c...
+compiling timers.c...
+compiling heap_3.c...
+compiling port.c...
+compiling FreeRTOSCommonHooks.c...
+assembling keil_startup_lpc15xx.s...
+compiling sysinit.c...
+linking...
+Program Size: Code=11352 RO-data=520 RW-data=104 ZI-data=25752  
+FromELF: creating hex file...
+".\Objects\SPI_SD.axf" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.0.pack
+                ARM::CMSIS:CORE:5.0.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1500_DFP.1.2.0.pack
+                Keil::Device:Startup:2.20
+                NXP LPC1500 Series Device Support and Examples
+   * Component: Startup Version: 2.20
+
+<h2>Collection of Component include folders:</h2>
+  D:\LPC_Working_projects\application\SPI_Test\RTE
+  D:\LPC_Working_projects\application\SPI_Test\RTE\Device\LPC1549JBD64
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\LPC1500_DFP\1.2.0\LPCOpen\software\lpc_core\lpc_chip\chip_15xx
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.0
+
+   * Component: Keil::Device:Startup:2.20
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   LPCOpen\applications\lpc15xx\startup_code\sysinit.c
+      Source file:   LPCOpen\applications\lpc15xx\startup_code\keil_startup_lpc15xx.s
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>
+>>>>>>> ab9299ab1405a4527544c0c786a8f0d10c17f294

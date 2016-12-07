@@ -1,0 +1,6 @@
+Dependencies for Project 'SPI_SD', Target 'Target 1': (DO NOT MODIFY !)
+F (RTE\Device\LPC1549JBD64\RTE_Device.h)(0x576903B2)()
+F (RTE\Device\LPC1549JBD64\keil_startup_lpc15xx.s)(0x576903B2)(--cpu Cortex-M3 --pd "__RTX SETA 1" -g --apcs=interwork -I C:\Keil_v5\ARM\RV31\Inc-I D:\SPI_Test\RTE-I D:\SPI_Test\RTE\Device\LPC1549JBD64-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1500_DFP\1.2.0\LPCOpen\software\lpc_core\lpc_chip\chip_15xx--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "LPC1549JBD64 SETA 1"--list .\listings\keil_startup_lpc15xx.lst --xref -o .\objects\keil_startup_lpc15xx.o --depend .\objects\keil_startup_lpc15xx.d)
+F (RTE\Device\LPC1549JBD64\sysinit.c)(0x576903B2)(-c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections-I C:\Keil_v5\ARM\RV31\Inc-I D:\SPI_Test\RTE-I D:\SPI_Test\RTE\Device\LPC1549JBD64-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\LPC1500_DFP\1.2.0\LPCOpen\software\lpc_core\lpc_chip\chip_15xx-D__UVISION_VERSION="517" -D_RTE_ -DLPC1549JBD64 -DCORE_M3-o .\objects\sysinit.o --omf_browse .\objects\sysinit.crf --depend .\objects\sysinit.d)
+I (D:\SPI_Test\RTE\RTE_Components.h)(0x582F0D10)
+I (C:\Keil_v5\ARM\PACK\Keil\LPC1500_DFP\1.2.0\LPCOpen\software\lpc_core\lpc_chip\chip_15xx\chip.h)(0x576903B2)

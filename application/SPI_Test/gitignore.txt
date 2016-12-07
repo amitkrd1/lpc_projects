@@ -1,0 +1,35 @@
+
+
+#IDE Specif folders#
+
+####################
+
+
+# 
+
+*.uvguix.AITL-DEV2
+*.uvoptx
+
+
+# Compiled source #
+
+###################
+
+Objects
+
+
+
+
+
+# Logs and databases #
+
+######################
+
+
+
+
+# OS generated files #
+
+######################
+
+
