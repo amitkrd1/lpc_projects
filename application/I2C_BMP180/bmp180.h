@@ -120,8 +120,8 @@ SDA       PC9       I2C3 Serial data
 #endif
 
 /* Registers */
-#define	BMP180_REGISTER_CONTROL 	0xF4
-#define	BMP180_REGISTER_RESULT 		0xF6
+//#define	BMP180_REGISTER_CONTROL 	0xF4
+//#define	BMP180_REGISTER_RESULT 		0xF6
 #define BMP180_REGISTER_EEPROM		0xAA
 
 /* Commands */

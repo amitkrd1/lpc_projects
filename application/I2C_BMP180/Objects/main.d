@@ -61,3 +61,5 @@
 .\objects\main.o: ..\..\sw\freeRTOS\Source\include\mpu_wrappers.h
 .\objects\main.o: ..\..\sw\freeRTOS\Source\include\task.h
 .\objects\main.o: ..\..\sw\freeRTOS\Source\include\list.h
+.\objects\main.o: bmp180.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

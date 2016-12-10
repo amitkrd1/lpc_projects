@@ -150,7 +150,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>12</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -164,7 +164,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
+            <Driver>BIN\CMSIS_AGDI.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -500,6 +500,11 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\sw\freeRTOS\Source\portable\RVDS\ARM_CM3\port.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOSCommonHooks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\sw\freeRTOS\freertoslpc\FreeRTOSCommonHooks.c</FilePath>
             </File>
           </Files>
         </Group>
