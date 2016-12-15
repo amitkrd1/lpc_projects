@@ -132,7 +132,7 @@ static void setupSpiMaster()
 	spiDelayCfg.TransferDelay = 2;
 	Chip_SPI_DelayConfig(LPC_SPI0, &spiDelayCfg);
 	/* Enable Loopback mode for this example */
-	Chip_SPI_EnableLoopBack(LPC_SPI0);
+	//Chip_SPI_EnableLoopBack(LPC_SPI0);
 	/* Enable SPI0 */
 	Chip_SPI_Enable(LPC_SPI0);
 }
