@@ -1,8 +1,10 @@
 --cpu Cortex-M3
 "..\..\sw\lib\board_nxp_lpcxpresso_1549.lib"
 "..\..\sw\lib\chip_15xx_lib.lib"
-".\objects\freertos_blinky.o"
-".\objects\sd_card.o"
+"..\..\sw\lib\lib_delay_lpc15xx.lib"
+".\objects\main.o"
+".\objects\sd_spi.o"
+".\objects\uart.o"
 ".\objects\croutine.o"
 ".\objects\event_groups.o"
 ".\objects\list.o"

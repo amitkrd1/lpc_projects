@@ -9,10 +9,9 @@
 .\objects\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\config_15xx\sys_config.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\config_15xx\cmsis.h
-.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h
-.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
-.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h
-.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\core_cm3.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_compiler.h
+.\objects\croutine.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_armcc.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\romapi_15xx.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_common\iap.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_common\eeprom.h
@@ -21,6 +20,7 @@
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_pwr_15xx.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_uart_15xx.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_can_15xx.h
+.\objects\croutine.o: ..\..\sw\lpc_core\lpc_board\boards_15xx\nxp_lpcxpresso_1549\board.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_dma_15xx.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_spi_15xx.h
 .\objects\croutine.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_adc_15xx.h

@@ -33,6 +33,7 @@
 	#include "FreeRTOS.h"
 	#include "task.h"
  #include "bmp180.h"
+ #include "stdlib.h"
 
 
 
@@ -160,7 +161,7 @@
 		
 		uint8_t slaveadd;
 	uint8_t data[22];
-	uint8_t BMP180TempRegisterAddress = 0;
+	uint8_t BMP180TempRegisterAddress = 0xAA;
 		uint8_t i = 0;
   bool slavecheck;
 	/* Read LM75 temperature sensor */
@@ -198,7 +199,60 @@
 	}
 
 	}
-
+	uint16_t master_read(uint8_t address)
+	{
+		uint16_t data;
+  LPC_I2C0->CFG = I2C_CFG_MSTEN;
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_IDLE) abort();
+LPC_I2C0->MSTDAT = (0xEF << 1) | 0; // address and 0 for RWn bit in order to write
+// subaddress
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTSTART; // send start
+while(!(LPC_I2C->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_TX) abort();
+LPC_I2C0->MSTDAT = address; // send subaddress
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTCONTINUE; // continue transaction
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_TX) abort();
+LPC_I2C0->MSTDAT = (0xEF << 1) | 1; // address and 1 for RWn bit in order to write
+// subaddress
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTSTART; // send repeated start
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_RX) abort();
+data = LPC_I2C0->MSTDAT; // read data
+//if(data != 0xdd) abort();
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTSTOP; // send stop
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_IDLE) abort();
+		
+		return data;
+	}
+	
+	void masterWrite_subaddress( uint8_t address,uint8_t subaddress,uint8_t data)
+	{
+		LPC_I2C0->CFG = I2C_CFG_MSTEN;
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_IDLE) abort();
+LPC_I2C0->MSTDAT = (address << 1) | 0; // address and 0 for RWn bit in order to write
+// subaddress
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTSTART; // send start
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_TX) abort();
+LPC_I2C0->MSTDAT = subaddress; // send subaddress
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTCONTINUE; // continue transaction
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_TX) abort();
+LPC_I2C0->MSTDAT = data; // send data
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTCONTINUE; // continue transaction
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_TX) abort();
+LPC_I2C0->MSTCTL = I2C_MSTCTL_MSTSTOP; // send stop
+while(!(LPC_I2C0->STAT & I2C_STAT_MSTPENDING));
+if((LPC_I2C0->STAT & I2C_STAT_MSTSTATE) != I2C_STAT_MSTST_IDLE) abort();
+	}
+		
+		
+	
 	void ReadTemp(TM_BMP180_t* BMP180_Data)
 		
 	{
@@ -210,22 +264,26 @@
 		uint8_t BMP180_REGISTER_CONTROL=0xF4;
 		uint8_t BMP180_REGISTER_RESULT=0xF6;
 		
-			Chip_I2CM_WriteByte(LPC_I2C0,0xF4);
-	    Chip_I2CM_WriteByte(LPC_I2C0,0x2E);
+//			Chip_I2CM_WriteByte(LPC_I2C0,0xF4);
+//	    Chip_I2CM_WriteByte(LPC_I2C0,0x2E);
 
+//
+//		
+//		SetupXferRecAndExecute(
+
+//		/* The BMP180 I2C bus address */
+//		BMP_SLV_ADD, 
+
+//		/* Transmit one byte, the BM180 temp register address */
+//		&BMP180_REGISTER_RESULT, 1, 
+
+//		/* Receive back two bytes, the contents of the temperature register */
+//		tempdata, 2);
+
+   masterWrite_subaddress(0xEE,0xF4,0x2E);
 	BMP180_Data->Delay = BMP180_TEMPERATURE_DELAY;
-		
-		SetupXferRecAndExecute(
-
-		/* The BMP180 I2C bus address */
-		BMP_SLV_ADD, 
-
-		/* Transmit one byte, the BM180 temp register address */
-		&BMP180_REGISTER_RESULT, 1, 
-
-		/* Receive back two bytes, the contents of the temperature register */
-		tempdata, 2);
-
+  value=master_read(0xF4);
+  printf("%d \r\n",value);
 		/* Get uncompensated temperature */
 	UT =tempdata[0] << 8 | tempdata[1];
 		printf(" UnT: %d \r \n",UT);
@@ -238,7 +296,7 @@
 
 	/* Get temperature in degrees */
 	temp = (B5 + 8) / ((float)160);
-	printf("AT: %d \r\n",temp);
+	//printf("AT: %d \r\n",temp);
 	}
   
 void readPressure(TM_BMP180_t* BMP180_Data, TM_BMP180_Oversampling_t Oversampling)
@@ -289,7 +347,7 @@ void readPressure(TM_BMP180_t* BMP180_Data, TM_BMP180_Oversampling_t Oversamplin
 	UP = (pressureValue[0] << 16 | pressureValue[1] << 8 | pressureValue[2]) >> (8 - (uint8_t)BMP180_Data->Oversampling);
 	/* Calculate true pressure */
 	
-	printf(" UP: %d \r\n",UP);
+	//printf(" UP: %d \r\n",UP);
 	B6 = B5 - 4000;
 	X1 = (B2 * (B6 * B6 * BMP180_1_4096)) * BMP180_1_2048;
 	X2 = AC2 * B6 * BMP180_1_2048;
@@ -311,7 +369,7 @@ void readPressure(TM_BMP180_t* BMP180_Data, TM_BMP180_Oversampling_t Oversamplin
 	p = p + (X1 + X2 + 3791) * BMP180_1_16;
 	
 	//printf("B7: %d \r\n",B7);
-	printf("%d \r\n",p);
+//	printf("%d \r\n",p);
 	
 	/* Save pressure */
 	BMP180_Data->Pressure = p;
@@ -427,7 +485,6 @@ void readPressure(TM_BMP180_t* BMP180_Data, TM_BMP180_Oversampling_t Oversamplin
 		readPressure(&BMP180_Data, TM_BMP180_Oversampling_UltraHighResolution);
 		//vTaskDelay(configTICK_RATE_HZ);
 		/* Sleep until a state change occurs in SysTick */
-			__WFI();
 		}
 	
 

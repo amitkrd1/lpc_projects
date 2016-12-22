@@ -28,6 +28,7 @@
  * copyright, permission, and disclaimer notice must appear in all copies of
  * this code.
  */
+ #include "board.h"
 
 #ifndef __ROM_CAN_15XX_H_
 #define __ROM_CAN_15XX_H_

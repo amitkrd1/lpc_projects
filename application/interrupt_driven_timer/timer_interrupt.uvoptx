@@ -82,12 +82,12 @@
         <Book>
           <Number>0</Number>
           <Title>Schematics (MCB1500)</Title>
-          <Path>C:\Keil_v5\ARM\PACK\Keil\MCB1500_BSP\1.1.0\Documents\MCB1500schematics 1.1.PDF</Path>
+          <Path>C:\Keil_v5\ARM\PACK\Keil\MCB1500_BSP\1.2.0\Documents\MCB1500schematics 1.1.PDF</Path>
         </Book>
         <Book>
           <Number>1</Number>
           <Title>User Manual (MCB1500)</Title>
-          <Path>C:\Keil_v5\ARM\PACK\Keil\MCB1500_BSP\1.1.0\Documents\mcb1500.chm</Path>
+          <Path>C:\Keil_v5\ARM\PACK\Keil\MCB1500_BSP\1.2.0\Documents\mcb1500.chm</Path>
         </Book>
         <Book>
           <Number>2</Number>
@@ -189,7 +189,6 @@
       <FileNumber>1</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\lpc_core\lpc_board\boards_15xx\nxp_lpcxpresso_1549\keil_output\board_nxp_lpcxpresso_1549.lib</PathWithFileName>
@@ -202,7 +201,6 @@
       <FileNumber>2</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\lpc_core\lpc_chip\chip_15xx\keil_output\chip_15xx_lib\chip_15xx_lib.lib</PathWithFileName>
@@ -223,7 +221,6 @@
       <FileNumber>3</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
@@ -236,7 +233,6 @@
       <FileNumber>4</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\startup_code\keil_startup_lpc15xx.s</PathWithFileName>
@@ -249,7 +245,6 @@
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\startup_code\sysinit.c</PathWithFileName>
@@ -270,7 +265,6 @@
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\croutine.c</PathWithFileName>
@@ -283,7 +277,6 @@
       <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\event_groups.c</PathWithFileName>
@@ -296,7 +289,6 @@
       <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\list.c</PathWithFileName>
@@ -309,7 +301,6 @@
       <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\queue.c</PathWithFileName>
@@ -322,7 +313,6 @@
       <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\tasks.c</PathWithFileName>
@@ -335,7 +325,6 @@
       <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\timers.c</PathWithFileName>
@@ -348,7 +337,6 @@
       <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\portable\MemMang\heap_3.c</PathWithFileName>
@@ -361,7 +349,6 @@
       <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\Source\portable\RVDS\ARM_CM3\port.c</PathWithFileName>
@@ -374,7 +361,6 @@
       <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-      <Focus>1</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\sw\freeRTOS\freertoslpc\FreeRTOSCommonHooks.c</PathWithFileName>

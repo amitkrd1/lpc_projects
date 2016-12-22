@@ -20,6 +20,7 @@
 .\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_pwr_15xx.h
 .\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_uart_15xx.h
 .\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_can_15xx.h
+.\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_board\boards_15xx\nxp_lpcxpresso_1549\board.h
 .\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_dma_15xx.h
 .\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_spi_15xx.h
 .\objects\freertoscommonhooks.o: ..\..\sw\lpc_core\lpc_chip\chip_15xx\rom_adc_15xx.h

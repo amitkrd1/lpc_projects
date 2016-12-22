@@ -373,7 +373,7 @@
               <MiscControls></MiscControls>
               <Define>CORE_M3</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\sw\lpc_core\lpc_board\boards_15xx\nxp_lpcxpresso_1549;..\..\sw\lpc_core\lpc_board\board_common;..\..\sw\lpc_core\lpc_chip\chip_15xx;..\..\sw\lpc_core\lpc_chip\chip_15xx\config_15xx;..\..\sw\lpc_core\lpc_chip\chip_common;..\..\sw\freeRTOS\Source\include;..\..\sw\freeRTOS\Source\portable\RVDS\ARM_CM3;..\..\sw\CMSIS;.\app</IncludePath>
+              <IncludePath>..\..\sw\lpc_core\lpc_board\boards_15xx\nxp_lpcxpresso_1549;..\..\sw\lpc_core\lpc_board\board_common;..\..\sw\lpc_core\lpc_chip\chip_15xx;..\..\sw\lpc_core\lpc_chip\chip_15xx\config_15xx;..\..\sw\lpc_core\lpc_chip\chip_common;..\..\sw\freeRTOS\Source\include;..\..\sw\freeRTOS\Source\portable\RVDS\ARM_CM3;..\..\sw\CMSIS;.\app;..\SPI_Test</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -426,20 +426,30 @@
               <FileType>4</FileType>
               <FilePath>..\..\sw\lib\chip_15xx_lib.lib</FilePath>
             </File>
+            <File>
+              <FileName>lib_delay_lpc15xx.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\..\sw\lib\lib_delay_lpc15xx.lib</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>app</GroupName>
           <Files>
             <File>
-              <FileName>freertos_blinky.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\app\freertos_blinky.c</FilePath>
+              <FilePath>.\app\main.c</FilePath>
             </File>
             <File>
-              <FileName>sd_card.c</FileName>
+              <FileName>sd_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\app\sd_card.c</FilePath>
+              <FilePath>.\sd_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\uart.c</FilePath>
             </File>
           </Files>
         </Group>

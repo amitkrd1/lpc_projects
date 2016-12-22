@@ -31,19 +31,21 @@ compiling sysinit.c...
 assembling keil_startup_lpc15xx.s...
 compiling bmp180.c...
 compiling main.c...
-main.c(161): warning:  #177-D: variable "slaveadd" was declared but never referenced
+main.c(162): warning:  #177-D: variable "slaveadd" was declared but never referenced
                 uint8_t slaveadd;
-main.c(165): warning:  #177-D: variable "slavecheck" was declared but never referenced
+main.c(166): warning:  #177-D: variable "slavecheck" was declared but never referenced
     bool slavecheck;
-main.c(205): warning:  #177-D: variable "i" was declared but never referenced
+main.c(259): warning:  #177-D: variable "i" was declared but never referenced
                 int i=0;
-main.c(208): warning:  #177-D: variable "value" was declared but never referenced
-                uint8_t value;
-main.c(210): warning:  #177-D: variable "BMP180_REGISTER_CONTROL" was declared but never referenced
+main.c(260): warning:  #550-D: variable "temp" was set but never used
+                int temp;
+main.c(264): warning:  #177-D: variable "BMP180_REGISTER_CONTROL" was declared but never referenced
                 uint8_t BMP180_REGISTER_CONTROL=0xF4;
-main.c(246): warning:  #550-D: variable "command" was set but never used
+main.c(265): warning:  #177-D: variable "BMP180_REGISTER_RESULT" was declared but never referenced
+                uint8_t BMP180_REGISTER_RESULT=0xF6;
+main.c(304): warning:  #550-D: variable "command" was set but never used
                 uint8_t command;
-main.c: 6 warnings, 0 errors
+main.c: 7 warnings, 0 errors
 compiling croutine.c...
 compiling event_groups.c...
 compiling list.c...
@@ -54,8 +56,8 @@ compiling heap_3.c...
 compiling port.c...
 compiling FreeRTOSCommonHooks.c...
 linking...
-Program Size: Code=15916 RO-data=588 RW-data=144 ZI-data=25720  
-".\Objects\I2C_BMP180.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=16360 RO-data=584 RW-data=144 ZI-data=25720  
+".\Objects\I2C_BMP180.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -73,7 +75,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.0
-Build Time Elapsed:  00:00:08
+Build Time Elapsed:  00:00:10
 </pre>
 </body>
 </html>

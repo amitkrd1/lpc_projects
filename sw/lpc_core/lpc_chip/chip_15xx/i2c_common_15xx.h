@@ -78,6 +78,9 @@ typedef struct {					/* I2C0 Structure         */
 /*
  * @brief I2C Status register Bit definition
  */
+#define I2C_STAT_MSTST_IDLE     (0x0)
+#define I2C_STAT_MSTST_RX       (0x2)
+#define I2C_STAT_MSTST_TX       (0x4)
 #define I2C_STAT_MSTPENDING             (1 << 0)		/*!< Master Pending Status Bit */
 #define I2C_STAT_MSTSTATE         (0x7 << 1)	/*!< Master State Code */
 #define I2C_STAT_MSTRARBLOSS      (1 << 4)		/*!< Master Arbitration Loss Bit */
